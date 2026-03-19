@@ -1,0 +1,163 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link rel="stylesheet" href="./css/style.css">
+        <title>Guia Digital Seguro</title>
+    </head>
+    <body>
+        <header class="header">
+            <div class="container">
+                <h1 class="logo">Guia Digital Seguro</h1>
+                <nav class="nav" data-menu="suave">
+                    <ul>
+                        <li>
+                            <a href="#inicio">Início</a>
+                        </li>
+                        <li>
+                            <a href="#modulos">Módulos</a>
+                        </li>
+                        <li>
+                            <a href="#quiz">Quiz</a>
+                        </li>
+                        <li>
+                            <a href="#contato">Contato</a>
+                        </li>
+                    </ul>
+                </nav>
+            </div>
+        </header>
+        <section id="inicio" class="hero">
+            <div class="container">
+                <h2>Aprenda a usar a internet com segurança</h2>
+                <p>
+                    Este guia foi criado para ajudar você a navegar na internet,
+                    utilizar o Pix e identificar golpes digitais.
+                </p>
+            </div>
+        </section>
+        <section id="modulos" class="modulos">
+            <div class="container">
+                <h2>Módulos de Aprendizado</h2>
+                <!-- TABS -->
+                <div class="tabs">
+                    <button class="tab-btn active" data-tab="internet">Internet</button>
+                    <button class="tab-btn" data-tab="pix">Pix</button>
+                    <button class="tab-btn" data-tab="golpes">Golpes</button>
+                    <button class="tab-btn" data-tab="seguranca">Segurança</button>
+                </div>
+                <!-- CONTEÚDOS -->
+                <div class="tab-content active" id="internet">
+                    <h3>O que é internet?</h3>
+                    <p>A internet é como uma grande rede que conecta pessoas.</p>
+                    <ul>
+                        <li>Conversar pelo WhatsApp</li>
+                        <li>Assistir vídeos</li>
+                        <li>Pagar contas</li>
+                        <li>Pesquisar informações</li>
+                    </ul>
+                    <p class="alert">⚠️ Mas é preciso cuidado ao clicar em links desconhecidos.</p>
+                    <div class="accordion-item"></div>
+                </div>
+                <div class="tab-content" id="pix">
+                    <h3>Como usar o Pix com segurança</h3>
+                    <p>O Pix é uma forma rápida de transferir dinheiro.</p>
+                    <p>Antes de confirmar:</p>
+                    <ul>
+                        <li>Verifique o nome da pessoa</li>
+                        <li>Confira o valor</li>
+                        <li>Não faça Pix para desconhecidos</li>
+                    </ul>
+                    <p class="alert">🚫 Bancos não pedem senha por mensagem.</p>
+                </div>
+                <div class="tab-content" id="golpes">
+                    <h3>Como identificar golpes</h3>
+                    <p>Golpes tentam enganar você para roubar dinheiro ou dados.</p>
+                    <p>Fique atento se a mensagem:</p>
+                    <ul>
+                        <li>Promete dinheiro fácil</li>
+                        <li>Pede sua senha</li>
+                        <li>Cria urgência: "Última chance!"</li>
+                    </ul>
+                    <p class="alert">Se tiver dúvida, não clique. 🚫</p>
+                </div>
+                <div class="tab-content" id="seguranca">
+                    <h3>Como proteger seus dados</h3>
+                    <ul>
+                        <li>Não compartilhe sua senha</li>
+                        <li>Use senhas diferentes</li>
+                        <li>Ative verificação em duas etapas</li>
+                        <li>Evite usar Wi-Fi público para banco</li>
+                    </ul>
+                </div>
+            </div>
+        </section>
+        <!-- QUIZ -->
+        <section id="quiz" class="quiz">
+            <div class="container">
+                <h2>Teste seus conhecimentos</h2>
+                <div class="quiz-question active">
+                    <p>1. Um banco pede sua senha ou código por mensagem de WhatsApp. Isso é seguro?</p>
+                    <button class="quiz-option" data-correct="false">Sim</button>
+                    <button class="quiz-option" data-correct="true">Não</button>
+                    <p class="quiz-feedback"></p>
+                </div>
+                <div class="quiz-question hidden">
+                    <p>2. Recebi uma notícia bombástica de um amigo no WhatsApp sem link de fonte confiável. Devo compartilhar?</p>
+                    <button class="quiz-option" data-correct="false">Sim, para avisar todos</button>
+                    <button class="quiz-option" data-correct="true">Não, devo verificar primeiro</button>
+                    <p class="quiz-feedback"></p>
+                </div>
+                <div class="quiz-question hidden">
+                    <p>3. Usar a mesma senha (como a data de nascimento) para tudo é uma boa prática?</p>
+                    <button class="quiz-option" data-correct="false">Sim, é mais fácil lembrar</button>
+                    <button class="quiz-option" data-correct="true">Não, facilita o acesso de invasores</button>
+                    <p class="quiz-feedback"></p>
+                </div>
+                <div class="quiz-question hidden">
+                    <p>4. Um anúncio diz que ganhei um prêmio incrível de uma loja famosa, mas pede para clicar num link estranho. O que fazer?</p>
+                    <button class="quiz-option" data-correct="true">Ignorar e fechar a página</button>
+                    <button class="quiz-option" data-correct="false">Clicar para resgatar o prêmio</button>
+                    <p class="quiz-feedback"></p>
+                </div>
+                <div class="quiz-question hidden">
+                    <p>5. Manter o celular e os aplicativos atualizados ajuda na segurança do aparelho?</p>
+                    <button class="quiz-option" data-correct="true">Sim</button>
+                    <button class="quiz-option" data-correct="false">Não, só ocupa espaço</button>
+                    <p class="quiz-feedback"></p>
+                </div>
+            </div>
+        </section>
+        <!-- CONTATO / FEEDBACK -->
+        <section id="contato" class="contato">
+            <div class="container">
+                <h2>Deixe seu feedback</h2>
+                <form id="formFeedback">
+                    <label for="nome">Nome (opcional)</label>
+                    <input type="text" id="nome">
+                    <label for="aprendeu">Você aprendeu algo novo?</label>
+                    <select id="aprendeu">
+                        <option value="">Selecione</option>
+                        <option value="sim">Sim</option>
+                        <option value="nao">Não</option>
+                    </select>
+                    <label for="comentario">Comentário</label>
+                    <textarea id="comentario"></textarea>
+                    <button type="submit">Enviar</button>
+                </form>
+                <p id="mensagem"></p>
+            </div>
+        </section>
+        <!-- FOOTER -->
+        <footer class="footer">
+            <div class="container">
+                <p>
+                    Projeto desenvolvido por Andressa Leles Serafim | 
+        Análise e Desenvolvimento de Sistemas - Uninter
+                </p>
+            </div>
+        </footer>
+        <script type="module" src="./js/script.js"></script>
+    </body>
+</html>
