@@ -3,12 +3,12 @@ export default function initformulario() {
   const mensagemElement = document.getElementById('mensagem');
   const corpoTabela = document.getElementById('corpoTabela');
 
-  // FUNÇÃO PARA MOSTRAR OS DADOS NA TABELA
+ 
   function exibirFeedbacks() {
     if (!corpoTabela) return;
     const lista = JSON.parse(localStorage.getItem('meusFeedbacks')) || [];
     
-    corpoTabela.innerHTML = ""; // Limpa antes de renderizar
+    corpoTabela.innerHTML = ""; 
     lista.forEach(item => {
       const linha = `
         <tr>
@@ -24,7 +24,7 @@ export default function initformulario() {
     });
   }
 
-  // Mostra a tabela assim que a página carrega
+  
   exibirFeedbacks();
 
   if (formFeedback) {
@@ -34,14 +34,14 @@ export default function initformulario() {
       const selectValue = document.getElementById("aprendeu").value;
       const comentarioValue = document.getElementById("comentario").value;
 
-      // Validação básica
+      
       if (selectValue === "" || (selectValue === "nao" && comentarioValue.trim() === "")) {
         mensagemElement.textContent = "Por favor, preencha os campos obrigatórios.";
         mensagemElement.style.color = "red";
         return;
       }
 
-      // Criar objeto
+
       const feedback = {
         nome: document.getElementById('nome').value || "Anônimo",
         idade: document.getElementById('idade').value,
@@ -51,17 +51,17 @@ export default function initformulario() {
         data: new Date().toLocaleDateString('pt-BR')
       };
 
-      // Salvar
+     
       let listaFeedbacks = JSON.parse(localStorage.getItem('meusFeedbacks')) || [];
       listaFeedbacks.push(feedback);
       localStorage.setItem('meusFeedbacks', JSON.stringify(listaFeedbacks));
 
-      // Sucesso
+      
       mensagemElement.textContent = "Feedback enviado com sucesso! Verifique a tabela abaixo.";
       mensagemElement.style.color = "green";
       
       formFeedback.reset();
-      exibirFeedbacks(); // Atualiza a tabela na hora!
+      exibirFeedbacks(); 
 
       setTimeout(() => { mensagemElement.textContent = ""; }, 5000);
     });
