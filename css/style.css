@@ -471,10 +471,17 @@ tbody tr:nth-child(even) {
   }
 
   .nav ul {
-    gap:10px;
+    gap: 8px; 
+    justify-content: center;
+    padding: 0 5px;
   }
   .nav a {
-    font-size:0.9rem;
+   font-size: 0.85rem; 
+    letter-spacing: -0.3px;
+  }
+
+  .header .container {
+    padding: 15px 10px; 
   }
 
   .hero {
