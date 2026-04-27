@@ -19,222 +19,288 @@
                             <a href="#modulos">Módulos</a>
                         </li>
                         <li>
-                            <a href="#quiz">Quiz</a>
+                            <a href="#glossario">Dicionário</a>
                         </li>
                         <li>
-                            <a href="#contato">Feedback</a>
-                        </li>
-                    </ul>
-                </nav>
-            </div>
-        </header>
-        <section id="inicio" class="hero">
-            <div class="container">
-                <h2>Aprenda a usar a internet com segurança</h2>
-                <p>
-                    Este guia foi criado para ajudar você a navegar na internet,
+                            <li>
+                                <a href="#quiz">Quiz</a>
+                            </li>
+                            <li>
+                                <a href="#contato">Feedback</a>
+                            </li>
+                        </ul>
+                    </nav>
+                </div>
+            </header>
+            <section id="inicio" class="hero">
+                <div class="container">
+                    <h2>Aprenda a usar a internet com segurança</h2>
+                    <p>
+                        Este guia foi criado para ajudar você a navegar na internet,
                     utilizar o Pix e identificar golpes digitais.
-                </p>
-            </div>
-        </section>
-        <section id="modulos" class="modulos">
-            <div class="container">
-                <h2>Módulos de Aprendizado</h2>
-                <!-- TABS -->
-                <div class="tabs">
-                    <button class="tab-btn active" data-tab="internet">Internet</button>
-                    <button class="tab-btn" data-tab="pix">Pix</button>
-                    <button class="tab-btn" data-tab="golpes">Golpes</button>
-                    <button class="tab-btn" data-tab="seguranca">Segurança</button>
+                    </p>
                 </div>
-                <!-- CONTEÚDOS -->
-                <div class="tab-content active" id="internet">
-                    <h3>O que é internet?</h3>
-                    <p>A internet é como uma grande rede que conecta pessoas em todo o mundo. Com ela, você pode:</p>
-                    <ul>
-                        <li>Conversar com amigos e familiares pelo WhatsApp.</li>
-                        <li>Assistir a vídeos, ouvir músicas e pesquisar informações.</li>
-                        <li>Pagar contas e fazer compras sem sair de casa.</li>
-                    </ul>
-                    <p class="alert">⚠️ <strong>Atenção:</strong> Recebeu um link de promoção com nome estranho (ex: loja-presente.net)? Não clique! Links falsos são a porta de entrada para vírus e roubo de dados.</p>
-                </div>
-
-                <div class="tab-content" id="pix">
-                    <h3>Como usar o Pix com segurança</h3>
-                    <p>O Pix é instantâneo: o dinheiro sai da sua conta e chega na outra em segundos.</p>
-                    <p><strong>Regras de Ouro antes de confirmar:</strong></p>
-                    <ul>
-                        <li>Verifique sempre o <strong>nome completo</strong> de quem vai receber.</li>
-                        <li>Confira se o valor está correto (cuidado com os zeros!).</li>
-                        <li>Bancos <strong>nunca</strong> pedem senhas ou códigos por mensagem ou ligação.</li>
-                    </ul>
-                    <p class="alert">🚫 Se alguém te ligar pedindo um Pix para "testar o sistema" ou "cancelar um erro", desligue imediatamente. É golpe!</p>
-                </div>
-
-                <div class="tab-content" id="golpes">
-                    <h3>Como identificar golpes comuns</h3>
-                    <p>Golpistas usam o medo ou a promessa de dinheiro fácil para te enganar.</p>
-                    <ul>
-                        <li><strong>Falso Suporte:</strong> Ninguém do banco liga pedindo para você instalar aplicativos de "segurança".</li>
-                        <li><strong>Alerta de Vírus:</strong> Sites que dizem "Seu celular está com vírus!" são mentirosos. Apenas feche a página.</li>
-                        <li><strong>Urgência:</strong> Mensagens como "Última chance!" ou "Sua conta será bloqueada agora!" tentam te impedir de pensar.</li>
-                    </ul>
-                    <p class="alert">✅ Mantenha seu celular sempre <strong>atualizado</strong>. As atualizações corrigem falhas que os golpistas usam.</p>
-                </div>
-
-                <div class="tab-content" id="seguranca">
-                    <h3>Como proteger seus dados</h3>
-                    <p>Pequenos hábitos diários garantem sua tranquilidade digital:</p>
-                    <ul>
-                        <li><strong>Senhas:</strong> Nunca anote senhas em papéis na carteira. Memorize ou use locais seguros.</li>
-                        <li><strong>Wi-Fi:</strong> Ao usar o aplicativo do banco, prefira o <strong>4G/5G</strong> do seu chip. Wi-Fi de shoppings ou praças pode ser vigiado por criminosos.</li>
-                        <li><strong>Desconhecidos:</strong> Não passe dados pessoais para quem acabou de te adicionar em redes sociais.</li>
-                        <li><strong>Verificação:</strong> Ative a "Verificação em duas etapas" no seu WhatsApp e e-mail.</li>
-                    </ul>
-                </div>
-            </div>
-        </section>
-        <!-- QUIZ -->
-        <section id="quiz" class="quiz">
-            <div class="container">
-                <h2>Teste seus conhecimentos</h2>
-                <div class="quiz-question active">
-                    <p>1. Um banco pede sua senha ou código por mensagem de WhatsApp. Isso é seguro?</p>
-                    <button class="quiz-option" data-correct="false">Sim</button>
-                    <button class="quiz-option" data-correct="true">Não</button>
-                    <p class="quiz-feedback"></p>
-                </div>
-                <div class="quiz-question hidden">
-                    <p>2. Recebi uma notícia bombástica de um amigo no WhatsApp sem link de fonte confiável. Devo compartilhar?</p>
-                    <button class="quiz-option" data-correct="false">Sim, para avisar todos</button>
-                    <button class="quiz-option" data-correct="true">Não, devo verificar primeiro</button>
-                    <p class="quiz-feedback"></p>
-                </div>
-                <div class="quiz-question hidden">
-                    <p>3. Usar a mesma senha (como a data de nascimento) para tudo é uma boa prática?</p>
-                    <button class="quiz-option" data-correct="false">Sim, é mais fácil lembrar</button>
-                    <button class="quiz-option" data-correct="true">Não, facilita o acesso de invasores</button>
-                    <p class="quiz-feedback"></p>
-                </div>
-                <div class="quiz-question hidden">
-                    <p>4. Um anúncio diz que ganhei um prêmio incrível de uma loja famosa, mas pede para clicar num link estranho. O que fazer?</p>
-                    <button class="quiz-option" data-correct="true">Ignorar e fechar a página</button>
-                    <button class="quiz-option" data-correct="false">Clicar para resgatar o prêmio</button>
-                    <p class="quiz-feedback"></p>
-                </div>
-                <div class="quiz-question hidden">
-                    <p>5. Manter o celular e os aplicativos atualizados ajuda na segurança do aparelho?</p>
-                    <button class="quiz-option" data-correct="true">Sim</button>
-                    <button class="quiz-option" data-correct="false">Não, só ocupa espaço</button>
-                    <p class="quiz-feedback"></p>
-                </div>
-
-                <div class="quiz-question hidden">
-                    <p>6. Onde é mais seguro guardar suas senhas de banco?</p>
-                    <button class="quiz-option" data-correct="false">Anotado em um papel na carteira</button>
-                    <button class="quiz-option" data-correct="true">Memorizada ou em um aplicativo seguro</button>
-                    <p class="quiz-feedback"></p>
+            </section>
+            <section id="modulos" class="modulos">
+                <div class="container">
+                    <h2>Módulos de Aprendizado</h2>
+                    <!-- TABS -->
+                    <div class="tabs">
+                        <button class="tab-btn active" data-tab="internet">Internet</button>
+                        <button class="tab-btn" data-tab="pix">Pix</button>
+                        <button class="tab-btn" data-tab="golpes">Golpes</button>
+                        <button class="tab-btn" data-tab="seguranca">Segurança</button>
                     </div>
-
+                    <!-- CONTEÚDOS -->
+                    <div class="tab-content active" id="internet">
+                        <h3>O que é internet?</h3>
+                        <p>A internet é como uma grande rede que conecta pessoas em todo o mundo. Com ela, você pode:</p>
+                        <ul>
+                            <li>Conversar com amigos e familiares pelo WhatsApp.</li>
+                            <li>Assistir a vídeos, ouvir músicas e pesquisar informações.</li>
+                            <li>Pagar contas e fazer compras sem sair de casa.</li>
+                        </ul>
+                        <p class="alert">
+                            ⚠️
+                            <strong>Atenção:</strong>
+                            Recebeu um link de promoção com nome estranho (ex: loja-presente.net)? Não clique! Links falsos são a porta de entrada para vírus e roubo de dados.
+                        </p>
+                    </div>
+                    <div class="tab-content" id="pix">
+                        <h3>Como usar o Pix com segurança</h3>
+                        <p>O Pix é instantâneo: o dinheiro sai da sua conta e chega na outra em segundos.</p>
+                        <p>
+                            <strong>Regras de Ouro antes de confirmar:</strong>
+                        </p>
+                        <ul>
+                            <li>
+                                Verifique sempre o
+                                <strong>nome completo</strong>
+                                de quem vai receber.
+                            </li>
+                            <li>Confira se o valor está correto (cuidado com os zeros!).</li>
+                            <li>
+                                Bancos
+                                <strong>nunca</strong>
+                                pedem senhas ou códigos por mensagem ou ligação.
+                            </li>
+                        </ul>
+                        <p class="alert">🚫 Se alguém te ligar pedindo um Pix para "testar o sistema" ou "cancelar um erro", desligue imediatamente. É golpe!</p>
+                    </div>
+                    <div class="tab-content" id="golpes">
+                        <h3>Como identificar golpes comuns</h3>
+                        <p>Golpistas usam o medo ou a promessa de dinheiro fácil para te enganar.</p>
+                        <ul>
+                            <li>
+                                <strong>Falso Suporte:</strong>
+                                Ninguém do banco liga pedindo para você instalar aplicativos de "segurança".
+                            </li>
+                            <li>
+                                <strong>Alerta de Vírus:</strong>
+                                Sites que dizem "Seu celular está com vírus!" são mentirosos. Apenas feche a página.
+                            </li>
+                            <li>
+                                <strong>Urgência:</strong>
+                                Mensagens como "Última chance!" ou "Sua conta será bloqueada agora!" tentam te impedir de pensar.
+                            </li>
+                        </ul>
+                        <p class="alert">
+                            ✅ Mantenha seu celular sempre
+                            <strong>atualizado</strong>
+                            . As atualizações corrigem falhas que os golpistas usam.
+                        </p>
+                    </div>
+                    <div class="tab-content" id="seguranca">
+                        <h3>Como proteger seus dados</h3>
+                        <p>Pequenos hábitos diários garantem sua tranquilidade digital:</p>
+                        <ul>
+                            <li>
+                                <strong>Senhas:</strong>
+                                Nunca anote senhas em papéis na carteira. Memorize ou use locais seguros.
+                            </li>
+                            <li>
+                                <strong>Wi-Fi:</strong>
+                                Ao usar o aplicativo do banco, prefira o
+                                <strong>4G/5G</strong>
+                                do seu chip. Wi-Fi de shoppings ou praças pode ser vigiado por criminosos.
+                            </li>
+                            <li>
+                                <strong>Desconhecidos:</strong>
+                                Não passe dados pessoais para quem acabou de te adicionar em redes sociais.
+                            </li>
+                            <li>
+                                <strong>Verificação:</strong>
+                                Ative a "Verificação em duas etapas" no seu WhatsApp e e-mail.
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </section>
+            <!--GLOSSÁRIO-->
+            <section id="glossario" class="glossario">
+                <div class="container">
+                    <h2>Dicionário Digital</h2>
+                    <p>Não conhece algum termo? Clique abaixo para entender de forma simples:</p>
+                    <div class="accordion">
+                        <div class="accordion-item">
+                            <button class="accordion-btn">O que é um "Link"?</button>
+                            <div class="accordion-content">
+                                <p>É uma palavra ou botão que, quando clicado, te leva para outra página ou site. Geralmente eles ficam na cor azul ou sublinhados.</p>
+                            </div>
+                        </div>
+                        <div class="accordion-item">
+                            <button class="accordion-btn">O que significa "Nuvem"?</button>
+                            <div class="accordion-content">
+                                <p>É um lugar na internet onde você guarda fotos e arquivos sem ocupar espaço no seu celular. Assim, você pode vê-los de qualquer outro aparelho.</p>
+                            </div>
+                        </div>
+                        <div class="accordion-item">
+                            <button class="accordion-btn">O que é "Autenticação em duas etapas"?</button>
+                            <div class="accordion-content">
+                                <p>É uma camada extra de segurança. Além da senha, o site te pede um código (geralmente enviado por SMS ou e-mail) para provar que é você mesmo.</p>
+                            </div>
+                        </div>
+                        <div class="accordion-item">
+                            <button class="accordion-btn">O que é um "Navegador"?</button>
+                            <div class="accordion-content">
+                                <p>É o programa que você usa para entrar na internet. Exemplos comuns são o Google Chrome, o Safari e o Microsoft Edge.</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+            <!-- QUIZ -->
+            <section id="quiz" class="quiz">
+                <div class="container">
+                    <h2>Teste seus conhecimentos</h2>
+                    <div class="quiz-question active">
+                        <p>1. Um banco pede sua senha ou código por mensagem de WhatsApp. Isso é seguro?</p>
+                        <button class="quiz-option" data-correct="false">Sim</button>
+                        <button class="quiz-option" data-correct="true">Não</button>
+                        <p class="quiz-feedback"></p>
+                    </div>
                     <div class="quiz-question hidden">
-                    <p>7. Você está no shopping e precisa acessar o aplicativo do banco. O que é melhor fazer?</p>
-                    <button class="quiz-option" data-correct="true">Usar os dados móveis (4G/5G) do seu celular</button>
-                    <button class="quiz-option" data-correct="false">Usar o Wi-Fi aberto e gratuito do shopping</button>
-                    <p class="quiz-feedback"></p>
+                        <p>2. Recebi uma notícia bombástica de um amigo no WhatsApp sem link de fonte confiável. Devo compartilhar?</p>
+                        <button class="quiz-option" data-correct="false">Sim, para avisar todos</button>
+                        <button class="quiz-option" data-correct="true">Não, devo verificar primeiro</button>
+                        <p class="quiz-feedback"></p>
                     </div>
-
                     <div class="quiz-question hidden">
-                    <p>8. Um site diz que seu celular está com vírus e pede para você clicar em 'Limpar Agora'. O que fazer?</p>
-                    <button class="quiz-option" data-correct="false">Clicar para remover o vírus rápido</button>
-                    <button class="quiz-option" data-correct="true">Fechar o site imediatamente; é um anúncio falso</button>
-                    <p class="quiz-feedback"></p>
+                        <p>3. Usar a mesma senha (como a data de nascimento) para tudo é uma boa prática?</p>
+                        <button class="quiz-option" data-correct="false">Sim, é mais fácil lembrar</button>
+                        <button class="quiz-option" data-correct="true">Não, facilita o acesso de invasores</button>
+                        <p class="quiz-feedback"></p>
                     </div>
-
                     <div class="quiz-question hidden">
-                    <p>9. Uma pessoa desconhecida te adiciona e começa a fazer perguntas sobre onde você mora e trabalha. Como agir?</p>
-                    <button class="quiz-option" data-correct="true">Bloquear e não passar informações pessoais</button>
-                    <button class="quiz-option" data-correct="false">Responder, afinal é só uma conversa comum</button>
-                    <p class="quiz-feedback"></p>
+                        <p>4. Um anúncio diz que ganhei um prêmio incrível de uma loja famosa, mas pede para clicar num link estranho. O que fazer?</p>
+                        <button class="quiz-option" data-correct="true">Ignorar e fechar a página</button>
+                        <button class="quiz-option" data-correct="false">Clicar para resgatar o prêmio</button>
+                        <p class="quiz-feedback"></p>
                     </div>
-
                     <div class="quiz-question hidden">
-                    <p>10. Apareceu um aviso de 'Atualização de Sistema' no seu celular. O que isso significa?</p>
-                    <button class="quiz-option" data-correct="true">É uma melhoria de segurança e deve ser feita</button>
-                    <button class="quiz-option" data-correct="false">É um vírus tentando entrar no aparelho</button>
-                    <p class="quiz-feedback"></p>
+                        <p>5. Manter o celular e os aplicativos atualizados ajuda na segurança do aparelho?</p>
+                        <button class="quiz-option" data-correct="true">Sim</button>
+                        <button class="quiz-option" data-correct="false">Não, só ocupa espaço</button>
+                        <p class="quiz-feedback"></p>
                     </div>
-            </div>
-        </section>
-
-        <!-- CONTATO / FEEDBACK -->
-        <section id="contato" class="contato">
-            <div class="container">
-                <h2>Deixe seu feedback</h2>
-                <form id="formFeedback">
-                    <label for="nome">Nome (opcional)</label>
-                    <input type="text" id="nome">
-                    <label for="idade">Qual sua faixa etária?</label>
-                    <select id="idade" required>
-                    <option value="">Selecione</option>
-                    <option value="jovem">Até 25 anos</option>
-                    <option value="adulto">26 a 59 anos</option>
-                    <option value="idoso">60 anos ou mais</option>
-                    </select>
-                    <label for="frequencia">Com que frequência você usa a internet?</label>
-                    <select id="frequencia" required>
-                    <option value="diario">Todos os dias</option>
-                    <option value="as-vezes">Às vezes</option>
-                    <option value="raramente">Raramente</option>
-                    </select>
-                    <label for="aprendeu">Você aprendeu algo novo?</label>
-                    <select id="aprendeu">
-                        <option value="">Selecione</option>
-                        <option value="sim">Sim</option>
-                        <option value="nao">Não</option>
-                    </select>
-                    <label for="comentario">Comentário</label>
-                    <textarea id="comentario"></textarea>
-                    <button type="submit">Enviar</button>
-                </form>
-                <p id="mensagem"></p>
-            </div>
-        </section>
-
-<section id="admin-feedbacks" class="container" style="margin-top: 50px; padding: 20px; background: #f9f9f9; border: 1px solid #ddd;">
-    <h3>Relatório de Feedbacks</h3>
-    
-    <div class="admin-actions">
-        <button id="btnToggleRelatorio" class="btn">Mostrar/Esconder Relatório</button>
-        <button id="btnLimparRelatorio" class="btn" style="background-color: #e74c3c;">Limpar Todos os Dados</button>
-    </div>
-
-        <div id="conteudoRelatorio" style="display: none;"> 
-            <div class="table-container">
-                <table>
-                    <thead>
-                        <tr>
-                            <th>Data</th>
-                            <th>Nome</th>
-                            <th>Idade</th>
-                            <th>Frequência</th>
-                            <th>Aprendeu?</th>
-                            <th>Comentário</th>
-                        </tr>
-                    </thead>
-                    <tbody id="corpoTabela"></tbody>
-                </table>
-            </div>
-        </div>
-</section>
-        <!-- FOOTER -->
-        <footer class="footer">
-            <div class="container">
-                <p>
-                    Projeto desenvolvido por Andressa Leles Serafim | 
+                    <div class="quiz-question hidden">
+                        <p>6. Onde é mais seguro guardar suas senhas de banco?</p>
+                        <button class="quiz-option" data-correct="false">Anotado em um papel na carteira</button>
+                        <button class="quiz-option" data-correct="true">Memorizada ou em um aplicativo seguro</button>
+                        <p class="quiz-feedback"></p>
+                    </div>
+                    <div class="quiz-question hidden">
+                        <p>7. Você está no shopping e precisa acessar o aplicativo do banco. O que é melhor fazer?</p>
+                        <button class="quiz-option" data-correct="true">Usar os dados móveis (4G/5G) do seu celular</button>
+                        <button class="quiz-option" data-correct="false">Usar o Wi-Fi aberto e gratuito do shopping</button>
+                        <p class="quiz-feedback"></p>
+                    </div>
+                    <div class="quiz-question hidden">
+                        <p>8. Um site diz que seu celular está com vírus e pede para você clicar em 'Limpar Agora'. O que fazer?</p>
+                        <button class="quiz-option" data-correct="false">Clicar para remover o vírus rápido</button>
+                        <button class="quiz-option" data-correct="true">Fechar o site imediatamente; é um anúncio falso</button>
+                        <p class="quiz-feedback"></p>
+                    </div>
+                    <div class="quiz-question hidden">
+                        <p>9. Uma pessoa desconhecida te adiciona e começa a fazer perguntas sobre onde você mora e trabalha. Como agir?</p>
+                        <button class="quiz-option" data-correct="true">Bloquear e não passar informações pessoais</button>
+                        <button class="quiz-option" data-correct="false">Responder, afinal é só uma conversa comum</button>
+                        <p class="quiz-feedback"></p>
+                    </div>
+                    <div class="quiz-question hidden">
+                        <p>10. Apareceu um aviso de 'Atualização de Sistema' no seu celular. O que isso significa?</p>
+                        <button class="quiz-option" data-correct="true">É uma melhoria de segurança e deve ser feita</button>
+                        <button class="quiz-option" data-correct="false">É um vírus tentando entrar no aparelho</button>
+                        <p class="quiz-feedback"></p>
+                    </div>
+                </div>
+            </section>
+            <!-- CONTATO / FEEDBACK -->
+            <section id="contato" class="contato">
+                <div class="container">
+                    <h2>Deixe seu feedback</h2>
+                    <form id="formFeedback">
+                        <label for="nome">Nome (opcional)</label>
+                        <input type="text" id="nome">
+                        <label for="idade">Qual sua faixa etária?</label>
+                        <select id="idade" required>
+                            <option value="">Selecione</option>
+                            <option value="jovem">Até 25 anos</option>
+                            <option value="adulto">26 a 59 anos</option>
+                            <option value="idoso">60 anos ou mais</option>
+                        </select>
+                        <label for="frequencia">Com que frequência você usa a internet?</label>
+                        <select id="frequencia" required>
+                            <option value="diario">Todos os dias</option>
+                            <option value="as-vezes">Às vezes</option>
+                            <option value="raramente">Raramente</option>
+                        </select>
+                        <label for="aprendeu">Você aprendeu algo novo?</label>
+                        <select id="aprendeu">
+                            <option value="">Selecione</option>
+                            <option value="sim">Sim</option>
+                            <option value="nao">Não</option>
+                        </select>
+                        <label for="comentario">Comentário</label>
+                        <textarea id="comentario"></textarea>
+                        <button type="submit">Enviar</button>
+                    </form>
+                    <p id="mensagem"></p>
+                </div>
+            </section>
+            <section id="admin-feedbacks" class="container" style="margin-top: 50px; padding: 20px; background: #f9f9f9; border: 1px solid #ddd;">
+                <h3>Relatório de Feedbacks</h3>
+                <div class="admin-actions">
+                    <button id="btnToggleRelatorio" class="btn">Mostrar/Esconder Relatório</button>
+                    <button id="btnLimparRelatorio" class="btn" style="background-color: #e74c3c;">Limpar Todos os Dados</button>
+                </div>
+                <div id="conteudoRelatorio" style="display: none;">
+                    <div class="table-container">
+                        <table>
+                            <thead>
+                                <tr>
+                                    <th>Data</th>
+                                    <th>Nome</th>
+                                    <th>Idade</th>
+                                    <th>Frequência</th>
+                                    <th>Aprendeu?</th>
+                                    <th>Comentário</th>
+                                </tr>
+                            </thead>
+                            <tbody id="corpoTabela"></tbody>
+                        </table>
+                    </div>
+                </div>
+            </section>
+            <!-- FOOTER -->
+            <footer class="footer">
+                <div class="container">
+                    <p>
+                        Projeto desenvolvido por Andressa Leles Serafim | 
         Análise e Desenvolvimento de Sistemas - Uninter
-                </p>
-            </div>
-        </footer>
-        <script type="module" src="./js/script.js"></script>
-    </body>
-</html>
+                    </p>
+                </div>
+            </footer>
+            <script type="module" src="./js/script.js"></script>
+        </body>
+    </html>
