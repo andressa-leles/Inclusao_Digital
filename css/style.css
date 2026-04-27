@@ -96,8 +96,20 @@ body {
 
 /* SEÇÃO GERAL */
 section h2 {
+ font-size: 2rem;
+ margin-bottom: 30px;
+}
+
+.quiz-question p {
+  font-size: 1.25rem; 
+  font-weight: 600;
   margin-bottom: 20px;
-  font-size: 28px;
+}
+
+
+.quiz-option {
+  font-size: 1.1rem;
+  padding: 15px; 
 }
 
 /* TABS */
@@ -264,11 +276,18 @@ form {
   gap: 15px;
 }
 
+form label {
+  font-size: 1.1rem;
+  font-weight: 600;
+  margin-bottom: 5px;
+  display: block;
+}
+
 input, select, textarea {
-  padding: 10px;
-  border-radius: 5px;
+ font-size: 1.1rem; 
+  padding: 12px;
   border: 1px solid #ccc;
-  font-size: 16px;
+
 }
 
 button[type="submit"] {
