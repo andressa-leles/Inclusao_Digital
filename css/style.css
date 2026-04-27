@@ -104,17 +104,21 @@ section h2 {
 .tabs {
   display: flex;
   gap: 10px;
+ justify-content: center;
   flex-wrap: wrap;
-  margin-bottom: 30px;
+  margin-bottom: 20px;
 }
 
 .tab-btn {
-  padding: 10px 20px;
+ padding: 12px;
   border: none;
   background-color: #dbeafe;
-  cursor: pointer;
-  border-radius: 5px;
+  color: #1e3a8a;
+  border-radius: 8px;
   font-weight: bold;
+  cursor: pointer;
+  flex: 1 1 calc(50% - 10px);
+  max-width: 200px;
 }
 
 
@@ -314,6 +318,43 @@ button[type="submit"]:hover {
   border: 1px solid #4ade80;
 }
 
+/*Container botões do relatório*/
+
+/* AJUSTE PARA DESGRUDAR OS BOTÕES */
+.admin-actions {
+  display: flex;
+  flex-direction: column; /* Garante que fiquem um sobre o outro */
+  gap: 12px;              /* Cria o espaço entre os botões */
+  margin-top: 20px;       /* Desgruda do título "Relatório de Feedbacks" */
+  margin-bottom: 10px;    /* Espaço antes da tabela aparecer */
+  align-items: center;
+}
+
+/* Garante que o botão de cima não tenha margem colada */
+#btnToggleRelatorio {
+  margin-bottom: 0; 
+}
+#btnToggleRelatorio, #btnLimparRelatorio {
+  flex: 1;
+  max-width: 250px; /* Não deixa crescer demais no notebook */
+  padding: 12px;
+  border: none;
+  border-radius: 6px;
+  font-weight: bold;
+  cursor: pointer;
+  font-size: 0.9rem;
+  color: white;
+  transition: filter 0.2s;
+}
+
+#btnToggleRelatorio {
+  background-color: #2c3e50; /* Azul acinzentado profissional */
+}
+
+#btnLimparRelatorio {
+  background-color: #e74c3c; /* Vermelho padrão */
+}
+
 /* FOOTER */
 .footer {
   background-color: #1e3a8a;
@@ -323,27 +364,67 @@ button[type="submit"]:hover {
   margin-top: 40px;
 }
 
+
 /* RESPONSIVIDADE */
+
+/* Tablets e Celulares Grandes */
 @media (max-width: 768px) {
   .header .container {
     flex-direction: column; 
     gap: 10px;
     padding: 20px 0;
   }
+
   .nav ul {
-    gap: 10px;
+    gap: 15px;
     padding-left: 0;
   }
 
-  .hero h2 {
-    font-size: 24px;
+  .hero {
+    padding: 30px 15px; /* Reduz o espaçamento excessivo que você notou */
   }
 
-  .hero p {
-    font-size: 16px;
+  .hero h2 { 
+    font-size: 1.5rem; 
+  }
+
+  .hero p { 
+    font-size: 1rem; 
+    margin-bottom: 15px; 
   }
 
   .tabs {
-    flex-direction: colum
+    flex-direction: column; /* Corrigido de 'colum' para 'column' */
+    width: 100%;
+  }
+
+  .tab-btn {
+    width: 100%; /* Botões de módulos ocupam a largura toda no celular */
+    max-width: none;
+  }
+}
+
+/* Celulares Médios (Ajuste para os botões do relatório) */
+@media (max-width: 600px) {
+  .admin-actions {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 10px;
+  }
+
+  #btnToggleRelatorio, 
+  #btnLimparRelatorio {
+    width: 100%;
+    max-width: none;
+    margin: 0; /* Garante que não haja margens sobrando */
+  }
+}
+
+/* Celulares Pequenos */
+@media (max-width: 480px) {
+  .tab-btn {
+    font-size: 0.9rem;
+    padding: 12px 5px; /* Aumentei um pouco o padding para facilitar o toque */
   }
 }
