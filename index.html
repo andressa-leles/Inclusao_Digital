@@ -172,21 +172,23 @@
         <button id="btnLimparRelatorio" class="btn" style="background-color: #e74c3c;">Limpar Todos os Dados</button>
     </div>
 
-    <div id="conteudoRelatorio" style="display: none;"> 
-        <table style="width: 100%; border-collapse: collapse; margin-top: 20px;">
-            <thead>
-                <tr style="background: #2c3e50; color: white;">
-                    <th style="padding: 10px; border: 1px solid #ddd;">Data</th>
-                    <th style="padding: 10px; border: 1px solid #ddd;">Nome</th>
-                    <th style="padding: 10px; border: 1px solid #ddd;">Idade</th>
-                    <th style="padding: 10px; border: 1px solid #ddd;">Frequência</th>
-                    <th style="padding: 10px; border: 1px solid #ddd;">Aprendeu?</th>
-                    <th style="padding: 10px; border: 1px solid #ddd;">Comentário</th>
-                </tr>
-            </thead>
-            <tbody id="corpoTabela"></tbody>
-        </table>
-    </div>
+        <div id="conteudoRelatorio" style="display: none;"> 
+            <div class="table-container">
+                <table>
+                    <thead>
+                        <tr>
+                            <th>Data</th>
+                            <th>Nome</th>
+                            <th>Idade</th>
+                            <th>Frequência</th>
+                            <th>Aprendeu?</th>
+                            <th>Comentário</th>
+                        </tr>
+                    </thead>
+                    <tbody id="corpoTabela"></tbody>
+                </table>
+            </div>
+        </div>
 </section>
         <!-- FOOTER -->
         <footer class="footer">
