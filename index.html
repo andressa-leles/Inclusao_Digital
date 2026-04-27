@@ -129,6 +129,7 @@
                 </div>
             </div>
         </section>
+
         <!-- CONTATO / FEEDBACK -->
         <section id="contato" class="contato">
             <div class="container">
@@ -136,6 +137,19 @@
                 <form id="formFeedback">
                     <label for="nome">Nome (opcional)</label>
                     <input type="text" id="nome">
+                    <label for="idade">Qual sua faixa etária?</label>
+                    <select id="idade" required>
+                    <option value="">Selecione</option>
+                    <option value="jovem">Até 25 anos</option>
+                    <option value="adulto">26 a 59 anos</option>
+                    <option value="idoso">60 anos ou mais</option>
+                    </select>
+                    <label for="frequencia">Com que frequência você usa a internet?</label>
+                    <select id="frequencia" required>
+                    <option value="diario">Todos os dias</option>
+                    <option value="as-vezes">Às vezes</option>
+                    <option value="raramente">Raramente</option>
+                    </select>
                     <label for="aprendeu">Você aprendeu algo novo?</label>
                     <select id="aprendeu">
                         <option value="">Selecione</option>
@@ -149,6 +163,24 @@
                 <p id="mensagem"></p>
             </div>
         </section>
+
+        <section id="admin-feedbacks" class="container" style="margin-top: 50px; padding: 20px; background: #f9f9f9; border: 1px solid #ddd;">
+    <h3>Relatório de Feedbacks (Dados para o Trabalho Extensionista)</h3>
+    <table style="width: 100%; border-collapse: collapse; margin-top: 20px;">
+        <thead>
+            <tr style="background: #2c3e50; color: white;">
+                <th style="padding: 10px; border: 1px solid #ddd;">Data</th>
+                <th style="padding: 10px; border: 1px solid #ddd;">Nome</th>
+                <th style="padding: 10px; border: 1px solid #ddd;">Idade</th>
+                <th style="padding: 10px; border: 1px solid #ddd;">Frequência</th>
+                <th style="padding: 10px; border: 1px solid #ddd;">Aprendeu?</th>
+                <th style="padding: 10px; border: 1px solid #ddd;">Comentário</th>
+            </tr>
+        </thead>
+        <tbody id="corpoTabela">
+            </tbody>
+    </table>
+</section>
         <!-- FOOTER -->
         <footer class="footer">
             <div class="container">

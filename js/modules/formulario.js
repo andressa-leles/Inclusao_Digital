@@ -1,36 +1,69 @@
 export default function initformulario() {
-  const form = document.querySelector("form");
+  const formFeedback = document.getElementById('formFeedback');
+  const mensagemElement = document.getElementById('mensagem');
+  const corpoTabela = document.getElementById('corpoTabela');
 
-  form.addEventListener("submit", function (event) {
-    event.preventDefault();
+  // FUNÇÃO PARA MOSTRAR OS DADOS NA TABELA
+  function exibirFeedbacks() {
+    if (!corpoTabela) return;
+    const lista = JSON.parse(localStorage.getItem('meusFeedbacks')) || [];
+    
+    corpoTabela.innerHTML = ""; // Limpa antes de renderizar
+    lista.forEach(item => {
+      const linha = `
+        <tr>
+          <td style="padding: 8px; border: 1px solid #ddd;">${item.data}</td>
+          <td style="padding: 8px; border: 1px solid #ddd;">${item.nome}</td>
+          <td style="padding: 8px; border: 1px solid #ddd;">${item.idade}</td>
+          <td style="padding: 8px; border: 1px solid #ddd;">${item.frequencia}</td>
+          <td style="padding: 8px; border: 1px solid #ddd;">${item.aprendeu}</td>
+          <td style="padding: 8px; border: 1px solid #ddd;">${item.comentario}</td>
+        </tr>
+      `;
+      corpoTabela.innerHTML += linha;
+    });
+  }
 
-    const selectValue = document.getElementById("aprendeu").value;
-    const comentario = document.getElementById("comentario").value;
-    const feedback = document.getElementById("mensagem");
+  // Mostra a tabela assim que a página carrega
+  exibirFeedbacks();
 
-    if (
-      selectValue === "" ||
-      (selectValue === "nao" && comentario.trim() === "")
-    ) {
-      feedback.textContent = "Por favor, preencha os campos obrigatórios.";
-      feedback.className = "mensagem-erro";
-    } else {
-      let mensagemFinal = "Obrigado pelo seu feedback!";
+  if (formFeedback) {
+    formFeedback.addEventListener('submit', function (event) {
+      event.preventDefault();
 
-      if (selectValue === "nao") {
-        mensagemFinal +=
-          " Sua opinião é importante! Conte para nós o que podemos melhorar.";
+      const selectValue = document.getElementById("aprendeu").value;
+      const comentarioValue = document.getElementById("comentario").value;
+
+      // Validação básica
+      if (selectValue === "" || (selectValue === "nao" && comentarioValue.trim() === "")) {
+        mensagemElement.textContent = "Por favor, preencha os campos obrigatórios.";
+        mensagemElement.style.color = "red";
+        return;
       }
 
-      feedback.textContent = mensagemFinal;
-      feedback.className = "mensagem-sucesso";
+      // Criar objeto
+      const feedback = {
+        nome: document.getElementById('nome').value || "Anônimo",
+        idade: document.getElementById('idade').value,
+        frequencia: document.getElementById('frequencia').value,
+        aprendeu: selectValue,
+        comentario: comentarioValue,
+        data: new Date().toLocaleDateString('pt-BR')
+      };
 
-      form.reset();
+      // Salvar
+      let listaFeedbacks = JSON.parse(localStorage.getItem('meusFeedbacks')) || [];
+      listaFeedbacks.push(feedback);
+      localStorage.setItem('meusFeedbacks', JSON.stringify(listaFeedbacks));
 
-      setTimeout(() => {
-        feedback.textContent = "";
-        feedback.className = "";
-      }, 5000);
-    }
-  });
+      // Sucesso
+      mensagemElement.textContent = "Feedback enviado com sucesso! Verifique a tabela abaixo.";
+      mensagemElement.style.color = "green";
+      
+      formFeedback.reset();
+      exibirFeedbacks(); // Atualiza a tabela na hora!
+
+      setTimeout(() => { mensagemElement.textContent = ""; }, 5000);
+    });
+  }
 }
