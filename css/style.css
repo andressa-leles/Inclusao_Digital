@@ -14,7 +14,7 @@ body {
 
 html {
   scroll-behavior: smooth; 
-  scroll-padding-top: 80px; 
+  scroll-padding-top: 200px; 
 }
 
 /* CONTAINER */
@@ -27,6 +27,7 @@ html {
 
 /* HEADER */
 .header {
+  padding: 20px 0;
   background-color: #1e3a8a;
   color: white;
 
@@ -52,24 +53,29 @@ html {
 }
 
 .nav ul {
- list-style: none;
   display: flex;
+  flex-wrap: wrap; 
+  justify-content: center;
+  list-style: none;
   gap: 25px;
-  margin-top: 0;
+  padding: 0;
 }
 
-.nav a {
-  color: rgba(255, 255, 255, 0.9);
-  text-decoration: none;
+.nav ul li a {
+  font-size: 1.2rem; /* Fonte maior para leitura fácil */
   font-weight: 500;
-  font-size: 16px;
-  transition: color 0.3s ease;
-}
-
-.nav a:hover {
   color: #ffffff;
   text-decoration: none;
-  text-shadow: 0 0 8px rgba(255, 255, 255, 0.5);
+  padding: 10px 15px; /* Aumenta a área de clique sem mudar o tamanho da letra */
+  display: inline-block;
+  transition: background 0.3s;
+  border-radius: 5px;
+}
+
+/* Efeito visual ao passar o mouse ou tocar */
+.nav ul li a:hover, .nav ul li a:focus {
+  background-color: rgba(255, 255, 255, 0.1);
+  text-decoration: underline;
 }
 
 /* HERO */
@@ -121,26 +127,52 @@ section h2 {
   padding: 15px; 
 }
 
+.quiz-result { 
+  text-align: center;
+  padding: 40px 20px;
+  display: flex;
+  flex-direction: column;
+  align-items: center; 
+  justify-content: center;
+}
+
+.quiz-result h2 {
+  font-size: 2rem;
+  margin-bottom: 20px;
+  color: #2c3e50;
+}
+
+.quiz-result p {
+  font-size: 1.2rem;
+  margin-bottom: 15px;
+  max-width: 500px; 
+}
+
+
+.btn-restart {
+  margin: 20px auto;
+  display: block;
+  padding: 12px 30px;
+  font-size: 1.1rem;
+}
 
 /* CONTAINER DAS TABS */
 .tabs {
   display: grid;
   grid-template-columns: 1fr 1fr; 
-  gap: 12px;
-  margin: 20px 0;
+  gap: 15px;
+  max-width: 400px; 
+  margin: 0 auto 30px;
 }
 
 .tab-btn {
-  padding: 15px 10px;
-  border: 2px solid #dbeafe;
-  background-color: #ffffff;
-  color: #1e3a8a;
-  border-radius: 12px; 
-  font-weight: 600;
-  font-size: 0.9rem;
+  width: 100%;
+  padding: 15px; 
+  font-size: 1.1rem;
+  font-weight: bold;
+  border-radius: 10px;
+  border: 1px solid #ccc;
   cursor: pointer;
-  transition: all 0.3s ease;
-  box-shadow: 0 2px 4px rgba(0,0,0,0.05);
 }
 
 .tab-btn.active {
