@@ -1,4 +1,4 @@
-/* RESET BÁSICO */
+
 * {
   margin: 0;
   padding: 0;
@@ -12,10 +12,6 @@ body {
   color: #333;
 }
 
-html {
-  scroll-behavior: smooth; 
-  scroll-padding-top: 280px; 
-}
 
 /* CONTAINER */
 .container {
@@ -28,55 +24,54 @@ html {
 
 /* HEADER */
 .header {
-  padding: 20px 0;
   background-color: #1e3a8a;
   color: white;
-
-  position: sticky; 
+  position: sticky;
   top: 0;
   width: 100%;
-  z-index: 1000; 
-  
-  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+  z-index: 1000;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.15);
+  padding: 20px 0;
 }
 
 .header .container {
   display: flex;
-  justify-content: space-between; 
-  align-items: center; 
-  padding: 15px 0; 
+  align-items: center;
+  justify-content: space-between; /* No PC fica um em cada ponta */
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 20px;
 }
-
 .logo {
-  font-size: 22px;
+  font-size: 1.4rem;
   font-weight: bold;
-  margin: 0;
 }
 
 .nav ul {
   display: flex;
-  flex-wrap: wrap; 
-  justify-content: center;
   list-style: none;
-  gap: 25px;
+  gap: 15px;
+  margin: 0;
   padding: 0;
 }
 
 .nav ul li a {
-  font-size: 1.2rem; 
-  font-weight: 500;
-  color: #ffffff;
+  color: white;
   text-decoration: none;
-  padding: 10px 15px; 
-  display: inline-block;
-  transition: background 0.3s;
+  font-weight: 500;
+  padding: 8px 12px;
   border-radius: 5px;
+  transition: background 0.3s;
 }
-
 
 .nav ul li a:hover, .nav ul li a:focus {
   background-color: rgba(255, 255, 255, 0.1);
   text-decoration: underline;
+}
+
+html {
+  scroll-behavior: smooth; 
+  scroll-padding-top: 120px; 
 }
 
 /* HERO */
@@ -498,10 +493,13 @@ tbody tr:nth-child(even) {
 }
 
 
-/* RESPONSIVIDADE */
-
 /* Tablets e Celulares Grandes */
 @media (max-width: 768px) {
+    html {
+    scroll-behavior: smooth; 
+    scroll-padding-top: 280px; 
+  }
+
   .header .container {
     flex-direction: column; 
     gap: 10px;
@@ -532,7 +530,7 @@ tbody tr:nth-child(even) {
   transition: background 0.3s, transform 0.2s;
 }
 
-/* Feedback visual ao tocar/passar o mouse */
+
 .nav ul li a:active, .nav ul li a:hover {
   background-color: rgba(255, 255, 255, 0.25);
   transform: scale(0.95); /
