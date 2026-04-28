@@ -6,7 +6,7 @@
 }
 
 body {
-  font-family: Arial, Helvetica, sans-serif;
+ font-family: "Inter", sans-serif;
   line-height: 1.6;
   background-color: #f4f6f9;
   color: #333;
@@ -14,7 +14,7 @@ body {
 
 html {
   scroll-behavior: smooth; 
-  scroll-padding-top: 200px; 
+  scroll-padding-top: 280px; 
 }
 
 /* CONTAINER */
@@ -24,6 +24,7 @@ html {
   margin: 0 auto;
   padding: 40px 0;
 }
+
 
 /* HEADER */
 .header {
@@ -42,7 +43,7 @@ html {
 .header .container {
   display: flex;
   justify-content: space-between; 
-  align-items: center; /
+  align-items: center; 
   padding: 15px 0; 
 }
 
@@ -62,17 +63,17 @@ html {
 }
 
 .nav ul li a {
-  font-size: 1.2rem; /* Fonte maior para leitura fácil */
+  font-size: 1.2rem; 
   font-weight: 500;
   color: #ffffff;
   text-decoration: none;
-  padding: 10px 15px; /* Aumenta a área de clique sem mudar o tamanho da letra */
+  padding: 10px 15px; 
   display: inline-block;
   transition: background 0.3s;
   border-radius: 5px;
 }
 
-/* Efeito visual ao passar o mouse ou tocar */
+
 .nav ul li a:hover, .nav ul li a:focus {
   background-color: rgba(255, 255, 255, 0.1);
   text-decoration: underline;
@@ -86,13 +87,18 @@ html {
 }
 
 .hero h2 {
-  font-size: 32px;
-  margin-bottom: 20px;
+  font-size: 2rem;
+  font-weight: 600;
+  margin-bottom: 15px;
 }
-
 .hero p {
-  font-size: 18px;
-  margin-bottom: 30px;
+  font-family: 'Inter', sans-serif;
+  font-size: 1.25rem; 
+  line-height: 1.6;   
+  color: #444;       
+  max-width: 800px;  
+  margin: 20px auto; 
+  padding: 0 10px;   
 }
 
 .btn {
@@ -502,19 +508,38 @@ tbody tr:nth-child(even) {
     padding: 20px 0;
   }
 
-  .nav ul {
-    gap: 8px; 
-    justify-content: center;
-    padding: 0 5px;
-  }
-  .nav a {
-   font-size: 0.85rem; 
-    letter-spacing: -0.3px;
-  }
+.nav ul {
+  display: flex;
+  flex-wrap: wrap; 
+  justify-content: center;
+  gap: 12px; 
+  padding: 10px 0;
+}
 
-  .header .container {
+.nav ul li a {
+  display: block;
+  font-family: 'Inter', sans-serif; 
+  font-size: 1.1rem; 
+  color: #ffffff;
+  text-decoration: none;
+  font-weight: 600;
+  
+  /* Aumentando a área de toque (Touch Target) */
+  padding: 12px 18px; 
+  background-color: rgba(255, 255, 255, 0.1); 
+  border-radius: 8px;
+  
+  transition: background 0.3s, transform 0.2s;
+}
+
+/* Feedback visual ao tocar/passar o mouse */
+.nav ul li a:active, .nav ul li a:hover {
+  background-color: rgba(255, 255, 255, 0.25);
+  transform: scale(0.95); /
+}
+.header .container {
     padding: 15px 10px; 
-  }
+ }
 
   .hero {
     padding: 30px 15px; 
