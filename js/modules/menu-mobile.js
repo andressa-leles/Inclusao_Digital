@@ -8,6 +8,7 @@ export default function initMenuMobile(){
         if (event.type === 'touchstart') event.preventDefault()
 
         nav.classList.toggle('active')
+        btnMenu.classList.toggle('active');
 
         const active = nav.classList.contains('active')
         event.currentTarget.setAttribute('aria-expanded', active)

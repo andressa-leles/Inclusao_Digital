@@ -493,97 +493,113 @@ tbody tr:nth-child(even) {
 }
 
 
-/* Tablets e Celulares Grandes */
+/*  responsivo */
+
+.menu-mobile-btn {
+  display: none;
+}
+
 @media (max-width: 768px) {
-    html {
-    scroll-behavior: smooth; 
-    scroll-padding-top: 280px; 
+  .menu-mobile-btn {
+    display: flex;
+    padding: 0.5rem 1rem;
+    font-size: 1rem;
+    border: none;
+    background: none;
+    cursor: pointer;
+    z-index: 1001; 
+    align-items: center;
+    justify-content: center;
   }
 
-  .header .container {
-    flex-direction: column; 
-    gap: 10px;
+  /* Estrutura do Hambúrguer */
+.hamburguer {
+    display: block;
+    width: 25px;
+    height: 2px;
+    background: white;
+    position: relative;
+    transition: 0.3s;
+  }
+
+.hamburguer::before,
+  .hamburguer::after {
+    content: '';
+    display: block;
+    width: 25px;
+    height: 2px;
+    background: white;
+    position: absolute;
+    transition: 0.3s;
+  }
+
+  .hamburguer::before { top: -8px; }
+  .hamburguer::after { bottom: -8px; }
+
+  .menu-mobile-btn.active .hamburguer {
+    background-color: transparent !important;
+  }
+
+  .menu-mobile-btn.active .hamburguer::before {
+    top: 0;
+    transform: rotate(45deg);
+  }
+
+.menu-mobile-btn.active .hamburguer::after {
+    bottom: 0;
+    transform: rotate(-45deg);
+  }
+
+  .nav {
+    display: block; 
+    position: absolute;
+    width: 100%;
+    top: 70px; 
+    right: 0;
+    background: #1a365d;
+    z-index: 1000;
+    
+   
+    max-height: 0;
+    opacity: 0;
+    visibility: hidden;
+    overflow: hidden;
+    transition: max-height 0.5s ease, opacity 0.4s ease, visibility 0.4s;
+  }
+
+  .nav.active {
+    max-height: 500px; 
+    opacity: 1;
+    visibility: visible;
     padding: 20px 0;
   }
 
-.nav ul {
-  display: flex;
-  flex-wrap: wrap; 
-  justify-content: center;
-  gap: 12px; 
-  padding: 10px 0;
-}
-
-.nav ul li a {
-  display: block;
-  font-family: 'Inter', sans-serif; 
-  font-size: 1.1rem; 
-  color: #ffffff;
-  text-decoration: none;
-  font-weight: 600;
-  
-  /* Aumentando a área de toque (Touch Target) */
-  padding: 12px 18px; 
-  background-color: rgba(255, 255, 255, 0.1); 
-  border-radius: 8px;
-  
-  transition: background 0.3s, transform 0.2s;
-}
-
-
-.nav ul li a:active, .nav ul li a:hover {
-  background-color: rgba(255, 255, 255, 0.25);
-  transform: scale(0.95); /
-}
-.header .container {
-    padding: 15px 10px; 
- }
-
-  .hero {
-    padding: 30px 15px; 
-  }
-
-  .hero h2 { 
-    font-size: 1.5rem; 
-  }
-
-  .hero p { 
-    font-size: 1rem; 
-    margin-bottom: 15px; 
-  }
-
-  .tabs {
-    flex-direction: column; 
-    width: 100%;
-  }
-
-  .tab-btn {
-    width: 100%; 
-    max-width: none;
-  }
-}
-
-/* Celulares Médios (Ajuste para os botões do relatório) */
-@media (max-width: 600px) {
-  .admin-actions {
-    display: flex;
+  .nav ul {
     flex-direction: column;
     align-items: center;
-    gap: 10px;
+    padding: 0;
+    margin: 0;
+    list-style: none;
   }
 
-  #btnToggleRelatorio, 
-  #btnLimparRelatorio {
+  .nav ul li {
     width: 100%;
-    max-width: none;
-    margin: 0; 
+    text-align: center;
   }
-}
 
-/* Celulares Pequenos */
-@media (max-width: 480px) {
-  .tab-btn {
-    font-size: 0.9rem;
-    padding: 12px 5px; 
+  .nav ul li a {
+    padding: 1.2rem;
+    display: block;
+    font-size: 1.3rem; 
+    color: white;
+    text-decoration: none;
+    opacity: 0;
+    transform: translateY(-10px);
+    transition: 0.4s ease;
+  }
+
+  .nav.active ul li a {
+    opacity: 1;
+    transform: translateY(0);
   }
 }
