@@ -500,6 +500,27 @@ tbody tr:nth-child(even) {
 }
 
 @media (max-width: 768px) {
+  #inicio {
+    background-color: #e3f2fd;
+    width: 100vw;
+    position: relative;
+    left: 50%;
+    right: 50%;
+    margin-left: -50vw;
+    margin-right: -50vw;
+    padding: 60px 0;
+  }
+
+  #inicio .container{
+    padding: 0 25px;
+    width: 100%;
+    margin: 0 auto;
+  }
+
+  #inicio h2 {
+    font-size: 1.8rem;
+    margin-bottom: 15px;
+  }
   .menu-mobile-btn {
     display: flex;
     padding: 0.5rem 1rem;
